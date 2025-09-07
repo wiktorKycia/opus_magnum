@@ -5,7 +5,7 @@ These are files from excercises and examples from the book Opus magnum c++ 11
 ## commands
 
 
-compilation:
+compilation (for Linux):
 ```bash
 /usr/bin/g++ -g main.cpp -o ./bin/main
 ```
