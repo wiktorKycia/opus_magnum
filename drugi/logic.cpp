@@ -23,5 +23,22 @@ int main()
     {
         cout << "liczba -1 to prawda";
     }
+
+    cout << endl << endl;
+
+    int day = 7;
+    // constexpr int seven{7};
+    constexpr int seven = 3+4;
+    switch(day)
+    {
+        case 1: cout << "Monday\n"; break;
+        case 2: cout << "Tuesday\n"; break;
+        case 3: cout << "Wednesday\n"; break;
+        case 4: cout << "Thurdsay\n"; break;
+        case 5: cout << "Freeday\n"; break;
+        case 6: cout << "Saturnday\n"; break;
+        case seven: cout << "Sunday\n"; break;
+        default: cout << "you stoo pid!!!";
+    }
     return 0;
 }
