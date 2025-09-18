@@ -171,6 +171,25 @@ int main()
     real n {5.4};
     cout << n << endl;
 
+    enum class akcja_t 
+    {
+        start_pomiaru = 0,
+        odczyt_pomiaru = 1,
+        zmiana_probki = 54,
+        zniszczenie_probki = 55
+    };
+
+    akcja_t co_robic;
+
+    co_robic = akcja_t::start_pomiaru;
+    // co_robic = 1; // tak nie można
+    // co_robic = akcja_t::1; // tak też nie można
+
+    if(co_robic == akcja_t::start_pomiaru)
+    {
+        cout << "start pomiaru" << endl;
+    }
+
 
     return 0;
 }
