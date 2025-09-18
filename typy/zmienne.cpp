@@ -171,7 +171,7 @@ int main()
     real n {5.4};
     cout << n << endl;
 
-    enum class akcja_t 
+    enum class Takcja //zakresowe enum
     {
         start_pomiaru = 0,
         odczyt_pomiaru = 1,
@@ -179,16 +179,32 @@ int main()
         zniszczenie_probki = 55
     };
 
-    akcja_t co_robic;
+    Takcja co_robic;
 
-    co_robic = akcja_t::start_pomiaru;
+    co_robic = Takcja::start_pomiaru;
     // co_robic = 1; // tak nie można
     // co_robic = akcja_t::1; // tak też nie można
 
-    if(co_robic == akcja_t::start_pomiaru)
+    if(co_robic == Takcja::start_pomiaru)
     {
         cout << "start pomiaru" << endl;
     }
+
+    enum class Todtwarzacz:char
+    {
+        play, stop, pause=16, fast_forward
+    };
+
+    int stop = static_cast<int>(Todtwarzacz::stop);
+    cout << stop << endl;
+
+    enum nazwa_enum {a1,a2}; // zwykłe (stare) enum
+    // różni sie to tym, ze nazwy a1, a2 są dostępne normalnie i nie trzeba poprzedzać tego np. w ten sposób: nazwa_enum::a1
+    // może nastąpić konflikt nazw między różnymi enum, dlatego lepiej jest stosować enum class
+
+    // stare zastosowanie zwykłego enum to definiowanie stałych liczbowych (w przypadku nienazwanego enum)
+    enum { a3, a4, a5};
+    cout << a4 << endl;
 
 
     return 0;
