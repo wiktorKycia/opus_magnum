@@ -9,6 +9,11 @@ można też zapisać:
 using std::cout
 using std::cin
 */
+
+typedef int calkowita; // te dwie deklaracje można stosować zamiennie
+using real = float;
+// utarło się, że typy tworzone deklaracją typedef zapisywać z końcówką _t, by nie pomylić z nazwą zmiennej
+
 int k = 33;
 
 int main()
@@ -162,6 +167,9 @@ int main()
     // za to nie można uzyskać od takiej zmiennej adresu pamięci
 
     volatile int m; // zmusza kompilator do sięgnięcia do pamięci po tę zmienną, zamiast cachowania sobie jej do rejestru
+
+    real n {5.4};
+    cout << n << endl;
 
 
     return 0;
