@@ -240,7 +240,9 @@ int main()
     wyliczanka em {}; // wartość domyślna dla enum to 0
     cout << static_cast<int>(em) << endl; // 0
     
-    
+    // auto x {}; // tak nie można, poza tym to jest bez sensu
+
+    alignas(16) long zmienna; // adres zmiennej musi być krotnością liczby 16 (dozwolone tylko potęgi liczby 2)
 
 
     return 0;
