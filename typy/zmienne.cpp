@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cstdint>
 #include<locale>
+#include<typeinfo>
 
 using namespace std;
 
@@ -206,6 +207,23 @@ int main()
     enum { a3, a4, a5};
     cout << a4 << endl;
 
+    auto variable = 56.78;
+
+    auto akcja = Takcja::zmiana_probki;
+
+    // cout << typeid(akcja).name() << endl; // checking type, requires typeinfo
+
+    double szer;
+    decltype(szer) wys;
+
+
+    unsigned int obj = 5;
+    using typ_roboczy = decltype(obj);
+
+    typ_roboczy zmie1;
+    typ_roboczy zmie2;
+
+    // cout << decltype(obj) << endl; // nie można wypisać
 
     return 0;
 }
