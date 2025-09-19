@@ -225,5 +225,23 @@ int main()
 
     // cout << decltype(obj) << endl; // nie można wypisać
 
+
+    // ! jeśli zmienna jest zadeklarowana, ale nie jest zainicjalizowana:
+    // ! poza main (globalnie): kompilator przypisuje zero stosowne do typu obiektu
+    // ! w main(): kompilator wogóle nie inicjalizuje, są tam losowe wartości
+
+    int liczba {}; // <- inicjalizacja zmiennej z zerem odpowiednim dla danego typu (wartość domniemana)
+
+    cout << liczba << endl;
+
+
+    enum class wyliczanka {ene=4, due=10, rabe};
+
+    wyliczanka em {}; // wartość domyślna dla enum to 0
+    cout << static_cast<int>(em) << endl; // 0
+    
+    
+
+
     return 0;
 }
