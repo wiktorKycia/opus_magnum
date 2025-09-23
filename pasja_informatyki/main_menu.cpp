@@ -1,4 +1,10 @@
 #include <iostream>
+
+/* potrzebne na windowsie, na linuxie wystarczy to co jest wyżej
+#include <stdio.h>
+#include <cstdlib>
+*/
+
 using namespace std;
 
 float x, y;
