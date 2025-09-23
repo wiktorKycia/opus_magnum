@@ -55,5 +55,7 @@ int main()
     czas = (double)(stop - start) / CLOCKS_PER_SEC;
     cout << "Czas wykonania: " << czas << endl;
 
+    delete [] tablica;
+
     return 0;
 }
