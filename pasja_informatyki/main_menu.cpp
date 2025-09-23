@@ -1,4 +1,5 @@
 #include <iostream>
+#include<conio.h>
 
 /* potrzebne na windowsie, na linuxie wystarczy to co jest wyżej
 #include <stdio.h>
@@ -8,7 +9,7 @@
 using namespace std;
 
 float x, y;
-int wybor;
+char wybor;
 
 int main ()
 {
@@ -27,8 +28,8 @@ int main ()
         cout << "4. Dzielenie" << endl;
         cout << "5. Wyjdź" << endl;
         
-        cout << "Wybierz: " ;
-        cin >> wybor;
+        cout << endl;
+        wybor = getch();
 
         if (wybor == 5)
         {
@@ -41,24 +42,24 @@ int main ()
         cin >> y;
 
         switch(wybor){
-            case 1:{
+            case '1':{
                 cout << x << " + " << y << " = " << x+y << endl;
                 break;
             }
 
-            case 2:
+            case '2':
             {
                 cout << x << " - " << y << " = " << x-y << endl;
                 break;
             }
 
-            case 3:
+            case '3':
             {
                 cout << x << " * " << y << " = " << x*y << endl;
                 break;
             }
 
-            case 4:
+            case '4':
             {
                 if (y == 0)
                 {
