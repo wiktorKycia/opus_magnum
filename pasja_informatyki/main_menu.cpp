@@ -23,6 +23,36 @@ int main ()
     cout << "Wybierz: " ;
     cin >> wybor;
 
+    switch(wybor){
+        case 1:{
+            cout << x << " + " << y << " = " << x+y << endl;
+            break;
+        }
+
+        case 2:
+        {
+            cout << x << " - " << y << " = " << x-y << endl;
+            break;
+        }
+
+        case 3:
+        {
+            cout << x << " * " << y << " = " << x*y << endl;
+            break;
+        }
+
+        case 4:
+        {
+            cout << x << " / " << y << " = " << x/y << endl;
+            break;
+        }
+
+        default:
+        {
+            cout << "Nie ma takiej opcji!" << endl;
+        }
+    }
+
     
     
 
