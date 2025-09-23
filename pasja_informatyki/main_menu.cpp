@@ -10,10 +10,7 @@ int main ()
 
     do
     {
-        cout << "Podaj 1 liczbę: ";
-        cin >> x;
-        cout << "Podaj 2 liczbę: ";
-        cin >> y;
+        system("clear");
 
         cout << endl;
         cout << "MENU GŁÓWNE" << endl;
@@ -23,9 +20,19 @@ int main ()
         cout << "3. Mnożenie" << endl;
         cout << "4. Dzielenie" << endl;
         cout << "5. Wyjdź" << endl;
-
+        
         cout << "Wybierz: " ;
         cin >> wybor;
+
+        if (wybor == 5)
+        {
+            exit(0);
+        }
+        
+        cout << "Podaj 1 liczbę: ";
+        cin >> x;
+        cout << "Podaj 2 liczbę: ";
+        cin >> y;
 
         switch(wybor){
             case 1:{
@@ -58,17 +65,13 @@ int main ()
                 break;
             }
 
-            case 5:
-            {
-                exit(0);
-                break;
-            }
-
             default:
             {
                 cout << "Nie ma takiej opcji!" << endl;
             }
         }
+        getchar();getchar();
+        
     }while(true);
     
     
