@@ -16,10 +16,16 @@ int main()
         exit(0);
     }
 
-    string text;
-    getline(file, text);
+    string line;
+    int line_number;
+    // getline pobiera z pliku linię i zapisuje ją do zmiennej, zwraca false jeśli jest to koniec pliku
+    // linie iterują się od 1, a nie od 0
+    while(getline(file, line)) 
+    {
 
-    cout << text << endl;
+    }
+
+    cout << line << endl;
 
     return 0;
 }
