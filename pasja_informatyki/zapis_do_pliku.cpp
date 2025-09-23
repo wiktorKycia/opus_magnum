@@ -16,11 +16,15 @@ int main()
     cin >> phone_num;
 
     fstream file;
-    file.open("data.txt", ios::out);
+    file.open("data.txt", ios::out | ios::app);
+    // ios::out - zapis do pliku, podmienia jeśli plik istnieje i jest w nim coś
+    // ios::out | ios::app - dopisuje do pliku
 
     file << name << endl;
     file << surname << endl;
     file << phone_num << endl;
+
+    file.close();
 
     return 0;
 }
