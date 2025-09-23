@@ -7,9 +7,9 @@ int wybor;
 int main ()
 {
     setlocale(LC_ALL, "pl_PL.UTF-8");
-    cout << "Podaj 1 liczbę: " << endl;
+    cout << "Podaj 1 liczbę: ";
     cin >> x;
-    cout << "Podaj 2 liczbę: " << endl;
+    cout << "Podaj 2 liczbę: ";
     cin >> y;
 
     cout << endl;
@@ -43,7 +43,14 @@ int main ()
 
         case 4:
         {
-            cout << x << " / " << y << " = " << x/y << endl;
+            if (y == 0)
+            {
+                cout << "Nie można dzielić przez 0" << endl;
+            }
+            else
+            {
+                cout << x << " / " << y << " = " << x/y << endl;
+            }
             break;
         }
 
