@@ -54,9 +54,19 @@ int main ()
         }
         
         cout << "Podaj 1 liczbę: ";
-        cin >> x;
+
+        if (!(cin >> x))
+        {
+            cerr << "To nie jest liczba!";
+            exit(0);
+        }
+
         cout << "Podaj 2 liczbę: ";
-        cin >> y;
+        if (!(cin >> y))
+        {
+            cerr << "To nie jest liczba!";
+            exit(0);
+        }
 
         switch(wybor){
             case '1':{
