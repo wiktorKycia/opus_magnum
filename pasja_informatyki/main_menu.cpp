@@ -7,59 +7,69 @@ int wybor;
 int main ()
 {
     setlocale(LC_ALL, "pl_PL.UTF-8");
-    cout << "Podaj 1 liczbę: ";
-    cin >> x;
-    cout << "Podaj 2 liczbę: ";
-    cin >> y;
 
-    cout << endl;
-    cout << "MENU GŁÓWNE" << endl;
-    cout << "===========" << endl;
-    cout << "1. Dodawanie" << endl;
-    cout << "2. Odejmowanie" << endl;
-    cout << "3. Mnożenie" << endl;
-    cout << "4. Dzielenie" << endl;
+    do
+    {
+        cout << "Podaj 1 liczbę: ";
+        cin >> x;
+        cout << "Podaj 2 liczbę: ";
+        cin >> y;
 
-    cout << "Wybierz: " ;
-    cin >> wybor;
+        cout << endl;
+        cout << "MENU GŁÓWNE" << endl;
+        cout << "===========" << endl;
+        cout << "1. Dodawanie" << endl;
+        cout << "2. Odejmowanie" << endl;
+        cout << "3. Mnożenie" << endl;
+        cout << "4. Dzielenie" << endl;
+        cout << "5. Wyjdź" << endl;
 
-    switch(wybor){
-        case 1:{
-            cout << x << " + " << y << " = " << x+y << endl;
-            break;
-        }
+        cout << "Wybierz: " ;
+        cin >> wybor;
 
-        case 2:
-        {
-            cout << x << " - " << y << " = " << x-y << endl;
-            break;
-        }
-
-        case 3:
-        {
-            cout << x << " * " << y << " = " << x*y << endl;
-            break;
-        }
-
-        case 4:
-        {
-            if (y == 0)
-            {
-                cout << "Nie można dzielić przez 0" << endl;
+        switch(wybor){
+            case 1:{
+                cout << x << " + " << y << " = " << x+y << endl;
+                break;
             }
-            else
+
+            case 2:
             {
-                cout << x << " / " << y << " = " << x/y << endl;
+                cout << x << " - " << y << " = " << x-y << endl;
+                break;
             }
-            break;
-        }
 
-        default:
-        {
-            cout << "Nie ma takiej opcji!" << endl;
-        }
-    }
+            case 3:
+            {
+                cout << x << " * " << y << " = " << x*y << endl;
+                break;
+            }
 
+            case 4:
+            {
+                if (y == 0)
+                {
+                    cout << "Nie można dzielić przez 0" << endl;
+                }
+                else
+                {
+                    cout << x << " / " << y << " = " << x/y << endl;
+                }
+                break;
+            }
+
+            case 5:
+            {
+                exit(0);
+                break;
+            }
+
+            default:
+            {
+                cout << "Nie ma takiej opcji!" << endl;
+            }
+        }
+    }while(true);
     
     
 
