@@ -54,7 +54,6 @@ int main ()
         }
         
         cout << "Podaj 1 liczbę: ";
-
         if (!(cin >> x))
         {
             cerr << "To nie jest liczba!";
