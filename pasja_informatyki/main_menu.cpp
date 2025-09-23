@@ -1,15 +1,32 @@
 #include <iostream>
-#include<conio.h>
+#include <termios.h>
+#include <unistd.h>
+#include <cstdlib>
 
 /* potrzebne na windowsie, na linuxie wystarczy to co jest wyżej
 #include <stdio.h>
 #include <cstdlib>
+#include<conio.h>
 */
 
 using namespace std;
 
 float x, y;
 char wybor;
+
+// Function to mimic getch() on Linux
+char getch() {
+    struct termios oldt, newt;
+    char ch;
+    tcgetattr(STDIN_FILENO, &oldt); // Get current terminal attributes
+    newt = oldt;
+    newt.c_lflag &= ~(ICANON | ECHO); // Disable canonical mode and echo
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt); // Set new attributes
+    ch = getchar(); // Read a single character
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt); // Restore old attributes
+    return ch;
+}
+
 
 int main ()
 {
@@ -31,7 +48,7 @@ int main ()
         cout << endl;
         wybor = getch();
 
-        if (wybor == 5)
+        if (wybor == '5')
         {
             exit(0);
         }
@@ -80,8 +97,6 @@ int main ()
         getchar();getchar();
         
     }while(true);
-    
-    
 
     return 0;
 }
