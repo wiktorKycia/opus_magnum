@@ -66,7 +66,7 @@ int main()
         cin >> odpowiedz;
 
         transform(odpowiedz.begin(), odpowiedz.end(), odpowiedz.begin(), ::tolower);
-        if(odpowiedz == poprawna[i])
+        if(odpowiedz == poprawna[i] || odpowiedz == poprawna[i].substr(0, 1))
         {
             cout << "Dobrze!" << endl;
             punkty++;
