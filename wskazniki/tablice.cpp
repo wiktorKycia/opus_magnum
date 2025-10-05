@@ -1,9 +1,24 @@
 #include <iostream>
 using namespace std;
 
+
+void sortuj(int tab[], int size) // to jest przekazanie tablicy przez referencję
+{
+    cout << &tab <<endl; // adres referencji
+    cout <<tab<<endl; // adres oryginalnej tablicy
+    for(int i = 0; i < size; i++)
+    {
+        cout << tab[i] << endl;
+    }
+}
+
 int main()
 {
-    int tab[10]; // statyczna alokacja tablicy 10 intów na stosie funkcji main
+    int tab[10]{1,2,3,4,5,6,7,8,9,10}; // statyczna alokacja tablicy 10 intów na stosie funkcji main
+    int size = 10; // Rozmiar tablicy
+    cout << &tab<< endl; // oba tutaj zwrócą adres tablicy
+    cout << tab << endl;
+    sortuj(tab, size);
     // nazwa tab identyfikuje adres pierwszego bajta tablicy
     tab[0] = 10;
     tab[1] = 5;
