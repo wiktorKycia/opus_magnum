@@ -17,7 +17,7 @@ int max_tab(int *tab, int size) // do tab przekazywany jest adres oryginalnego o
 {
     int m = tab[0];
     for(int i = 1; i < size; i++)
-        if (tab[i] > m) m = tab[i];
+        if (tab[i] < m) m = tab[i];
     
     return m;
 }
