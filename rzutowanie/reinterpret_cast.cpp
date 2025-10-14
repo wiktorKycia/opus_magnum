@@ -1,0 +1,1 @@
+//* pozwala na przypisanie wskaźnika jednego typu do wskaźnika innego typu

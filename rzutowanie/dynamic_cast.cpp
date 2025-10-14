@@ -1,0 +1,1 @@
+//* to jest coś do pracy z klasami, podobne do static_cast, ale sprawdza w czasie trwania programu, zwraca wyjątek
