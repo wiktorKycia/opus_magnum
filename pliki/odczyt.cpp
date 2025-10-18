@@ -158,8 +158,10 @@ int main()
     // read_char_by_char2(file);
     // read_with_char_array(file);
     // read_max_line_lenght(file);
+    // read_with_std_getline(file);
+    // read_with_operator(file);
     // read_with_string_stream(file);
-    read_with_vector(file);
+    // read_with_vector(file);
 
 
     file.close();
