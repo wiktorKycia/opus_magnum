@@ -25,7 +25,7 @@ ios::app
     - data is added at the end
     - file created if not exists
 
-ios::truncates
+ios::trunc
     - truncates the file
     - usually combined with ios::out
 
