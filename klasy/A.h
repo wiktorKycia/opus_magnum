@@ -11,7 +11,8 @@ class A
 	int j(int x);//deklaracja funkcji  prywatnej
 
 
- public: // zmiana poziomuy na publiczny
+ public: // zmiana poziomu na publiczny
+    static unsigned int ile; // deklaracja składowej statycznej
 
 	int skladowa_3{200}; // deklaracja składowej publicznej (wartość początkowa to 200)
 	double skladowa_4; // deklaracja składowej publicznej

@@ -1,6 +1,8 @@
 #include "A.h"
 #include<iostream>
 
+unsigned int A::ile = {0}; // deifinicja składowej statycznej
+
 int A::f(int x)//definicja metody f z klasy A
 {
 	//kod metody f
