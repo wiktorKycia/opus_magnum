@@ -32,7 +32,7 @@ class A
 	int h(int x);//deklaracja funkcji  chronionej
 };
 
-int A::h(int x) // implementacje można dawać też w pliku .h
+inline int A::h(int x) // implementacje można dawać też w pliku .h (ale tylko z inline)
 {
     return 0;
 }

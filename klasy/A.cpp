@@ -12,6 +12,7 @@ int A::f(int x)//definicja metody f z klasy A
 
 int A::j(int x)
 {
+    return x;
 	//kod metody j
 }
 
