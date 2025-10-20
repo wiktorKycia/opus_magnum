@@ -47,13 +47,31 @@ class A
             x = {_x};
             test = {_test};
 
-		}
+		};
 	//...
+};
+
+
+class C
+{
+	double x;
+
+	int y;
+
+	public:
+		C(double _x,  int _y): x{_x},  y{_y}
+		{
+
+		}
+
+		C(): C(0.0, 0){} // dziedziczenie konstruktorów
+
 };
 
 int main()
 {
     Person *p = new Person("Wiktor");
     p->say_hello();
+    delete p;
     return 0;
 }
