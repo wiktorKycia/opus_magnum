@@ -24,12 +24,12 @@ int main()
     n = 3;
     a |= 1 << n;
     cout << (int)a << endl;
-print_bit_representation(a);
+    print_bit_representation(a);
 
 
     // Unset
     a &= ~(1 << n);
-print_bit_representation(a);
+    print_bit_representation(a);
     // cout << (int)a << endl;
 
     // Toggle
